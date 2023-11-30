@@ -1,0 +1,207 @@
+<head>
+  <!--Tira o erros dos acentos portugueses-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noticas</title>
+
+  <!--Faz import do css-->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Importar o JQuery através de um Content Delivery Network-->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" 
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  
+  <!-- Importar a biblioteca FontAwesome que contêm icones-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+  crossorigin="anonymous" />
+
+  <!-- Importar uma fonte do Google para o titulo do banner -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@100;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!--Acrescenta o relógio-->
+  <div class="primeirobanner">
+      <SCRIPT LANGUAGE="JAVASCRIPT">
+          
+          //Define os dias da semana e uma função para os dias da semana
+          var now = new Date();
+          var mName = now.getMonth() +1 ;
+          var dName = now.getDay() +1;
+          var dayNr = now.getDate();
+          var yearNr=now.getYear();
+          if(dName==1) {Day = "Domingo";}
+          if(dName==2) {Day = "Segunda-feira";}
+          if(dName==3) {Day = "Terça-feira";}
+          if(dName==4) {Day = "Quarta-feira";}
+          if(dName==5) {Day = "Quinta-feira";}
+          if(dName==6) {Day = "Sexta-feira";}
+          if(dName==7) {Day = "Sábado";}
+          if(mName==1){Month = "Janeiro";}
+          if(mName==2){Month = "Fevereiro";}
+          if(mName==3){Month = "Março";}
+          if(mName==4){Month = "Abril";}
+          if(mName==5){Month = "Maio";}
+          if(mName==6){Month = "Junho";}
+          if(mName==7){Month = "Julho";}
+          if(mName==8){Month = "Agosto";}
+          if(mName==9){Month = "Setembro";}
+          if(mName==10){Month = "Outubro";}
+          if(mName==11){Month = "Novembro";}
+          if(mName==12){Month = "Dezembro";}
+          if(yearNr < 2000) {Year = 1900 + yearNr;}
+          else {Year = yearNr;}
+          var todaysDate =(" " + Day + " " + dayNr + "/" + Month + "/" + Year);
+          
+          document.write('  '+todaysDate);
+          
+          //-->
+          </SCRIPT>
+          
+          <!--Define o tipo de relógio-->
+          <SPAN ID="Clock">00:00</SPAN>
+          
+          <SCRIPT LANGUAGE="JavaScript">
+              //Define as horas para inserir no relógio
+            var Elem = document.getElementById("Clock");
+            function Horario(){ 
+              var Hoje = new Date(); 
+              var Horas = Hoje.getHours(); 
+              if(Horas < 10){ 
+                Horas = "0"+Horas; 
+              } 
+              var Minutos = Hoje.getMinutes(); 
+              if(Minutos < 10){ 
+                Minutos = "0"+Minutos; 
+              } 
+              var Segundos = Hoje.getSeconds(); 
+              if(Segundos < 10){ 
+                Segundos = "0"+Segundos; 
+              } 
+              Elem.innerHTML = Horas+":"+Minutos; 
+              } 
+              window.setInterval("Horario()",1000);
+          //-->
+          </SCRIPT>
+  </div>
+
+  <!--Banner topo da página-->
+  <div class="banner">
+          <a id="title" href="pag_inicial.html">Notícias</a> <a id="subtitle" href="pag_inicial.html">.pt</a>
+          <a class="icon">
+              <i class="fas fa-bars"></i>
+          </a>
+  </div>
+
+  <!-- Importar o ficheiro main.js que está na pasta js-->
+  <script src="js/script.js"></script>
+
+<!--Barra de opções superior-->
+<div class="topnav">
+    <a href="pag_futebol.html"> Futebol </a>
+    <a>    </a>
+    <a href="pag_portugal.html"> Portugal </a>
+    <a>    </a>
+    <a href="pag_mundo.html"> Mundo </a>
+    <a>    </a>   
+</div>
+
+  <!--Container com as noticias onde cada card contem 1 notícia, um título e uma pequena
+  descrição da notícia associada-->
+  <div class="container">
+      <!--FUTEBOL-->
+      <!--Cada card contem 1 imagem, 1 título e uma descriçao, onde dá para aceder à notícia
+      através de um click num dos 3 elementos-->
+      <div class="card">
+          <div class="news_img">
+              <a href="ronaldo.html">
+                  <img src="assets/ronaldo_news.jpg">
+              </a>
+          </div>
+          <div class="news_card">
+              <a href="ronaldo.html" id="textos">
+                  <h3 class="news_header">CRISTIANO RONALDO CONFIRMA VEIA GOLEADORA</h3>
+                  <h4 class="news_subheader">Juventus vence Sassuolo por 3-1</h4>
+                  <!--11 JANEIRO-->
+              </a>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="news_img">
+              <a href="pacos.html">
+                  <img src="assets/pacos_news.jpg">
+              </a>
+          </div>
+          <div class="news_card">
+              <a href="pacos.html" id="textos">
+                  <h3 class="news_header">PAÇOS DE FERREIRA SOBE AO QUINTO LUGAR</h3>
+                  <h4 class="news_subheader">Varela e Richard Rodrigues foram baixas no Belenenses SAD por testarem positivo.</h4>
+                  <!--11 JANEIRO-->
+              </a>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="news_img">
+              <a href="porto.html">
+                  <img src="assets/porto.jpg">
+              </a>
+          </div>
+          <div class="news_card">
+              <a href="porto.html" id="textos">
+                  <h3 class="news_header">FC PORTO BATE NACIONAL NO PROLONGAMENTO E SEGUE EM FRENTE NA TAÇA APÓS JOGO POLÉMICO</h3>
+                  <h4 class="news_subheader">Jogo chegou aos 90 minutos empatado, mas Sérgio Oliveira e Taremi garantiram a vantagem aos azuis e brancos.</h4>
+              <!--12 JANEIRO-->
+              </a>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="news_img">
+              <a href="benfica.html">
+                  <img src="assets/benfica.jpg">
+              </a>
+          </div>
+          <div class="news_card">
+              <a href="benfica.html" id="textos">
+              <h3 class="news_header">JORGE JESUS: "PRECISAMOS DE OUTRO JOGADORES PRONTOS A COMPETIR"</h3>
+              <h4 class="news_subheader">Um dos centrais, pelo menos, descansará e o avançado Gonçalo Ramos “terá uma oportunidade”.</h4>
+              <!--12 JANEIRO-->
+              </a>
+          </div>
+      </div>
+
+      <div class="card">
+          <div class="news_img">
+              <a href="maritimo.html">
+                  <img src="assets/maritimo.jpg">
+              </a>
+          </div>
+          <div class="news_card">
+              <a href="maritimo.html" id="textos">
+                  <h3 class="news_header">MARÍTIMO VENCE SPORTING NA MADEIRA E AFASTA LEÕES DA TAÇA DE PORTUGAL</h3>
+                  <h4 class="news_subheader">Rodrigo Pinho marcou o primeiro e Léo Andrade fechou a contagem.</h4>
+                  <!--12 JANEIRO-->
+              </a>
+          </div>
+      </div>
+      <!--FIM FUTEBOL-->
+  </div>
+
+  <!--Banner final-->
+  <div class="finalbanner">
+      <a id="finaltitulo" href="pag_inicial.html">Noticias</a> <a id="finalsubtitle" href="pag_inicial.html">.pt</a>  
+  </div>
+
+ <!--Opções inferiores-->
+ <div class="opcoes">
+    <a href="pag_futebol.html">Futebol</a>
+    <a href="pag_portugal.html">Portugal</a>
+    <a href="pag_mundo.html">Mundo</a>
+    <a href="report_news.html">Reportar Notícias</a>
+    <a href="https://www.google.pt/maps/place/Di%C3%A1rio+de+Not%C3%ADcias/@38.7560439,-9.1764279,16.75z/data=!4m8!1m2!2m1!1snoticias!3m4!1s0xd1932d969dcd019:0x3826f4a0e9033600!8m2!3d38.7570311!4d-9.1747698"> Localização da Redação </a>    
+</div>
+</body>
